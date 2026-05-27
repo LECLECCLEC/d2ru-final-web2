@@ -60,8 +60,8 @@ if (contactForm) {
 const tocItems = document.querySelectorAll('.toc-item');
 
 const sectionMap = [
-  { id: 'about', index: 0 },
-  { id: 'clients', index: 1 },
+  { id: 'clients', index: 0 },
+  { id: 'about', index: 1 },
   { id: 'expertise', index: 2 },
   { id: 'services', index: 3 },
   { id: 'history', index: 4 },
@@ -91,4 +91,4 @@ function updateToc() {
 }
 
 window.addEventListener('scroll', updateToc);
-updateToc(); // 페이지 로드시 바로 실행
+updateToc();
