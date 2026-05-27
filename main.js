@@ -16,13 +16,11 @@ const observer = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting) return;
     const el = entry.target;
 
-    // 카드 페이드인
     if (el.classList.contains('card') || el.classList.contains('service-card')) {
       setTimeout(() => el.classList.add('visible'), i * 120);
       observer.unobserve(el);
     }
 
-    // 바 차트
     if (el.classList.contains('bar')) {
       el.style.height = el.dataset.height + '%';
       observer.unobserve(el);
@@ -49,7 +47,7 @@ if (contactForm) {
     });
 
     if (response.ok) {
-      contactForm.innerHTML = '<p style="color:#818cf8; font-size:18px; font-weight:600; text-align:center; padding:40px 0;">✅ 문의가 접수되었습니다!<br><span style="font-size:14px; color:rgba(255,255,255,0.5); font-weight:400;">빠른 시일 내에 연락드리겠습니다.</span></p>';
+      contactForm.innerHTML = '<p style="color:#3B82F6; font-size:18px; font-weight:600; text-align:center; padding:40px 0;">✅ 문의가 접수되었습니다!<br><span style="font-size:14px; color:#64748B; font-weight:400;">빠른 시일 내에 연락드리겠습니다.</span></p>';
     } else {
       btn.textContent = '문의 신청하기';
       btn.disabled = false;
@@ -57,3 +55,40 @@ if (contactForm) {
     }
   });
 }
+
+// 사이드바 목차 스크롤 하이라이트
+const tocItems = document.querySelectorAll('.toc-item');
+
+const sectionMap = [
+  { id: 'about', index: 0 },
+  { id: 'clients', index: 1 },
+  { id: 'expertise', index: 2 },
+  { id: 'services', index: 3 },
+  { id: 'history', index: 4 },
+  { id: 'contact', index: 5 }
+];
+
+function updateToc() {
+  let currentIndex = 0;
+
+  sectionMap.forEach(({ id, index }) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2) {
+        currentIndex = index;
+      }
+    }
+  });
+
+  tocItems.forEach((item, i) => {
+    if (i === currentIndex) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateToc);
+updateToc(); // 페이지 로드시 바로 실행
