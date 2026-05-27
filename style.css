@@ -724,3 +724,75 @@ footer > p {
   .skills-section { padding: 80px 20px; }
   .stats-bar { padding: 32px 20px; }
 }
+
+/* 사이드바 목차 */
+.sidebar-toc {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px 0;
+  width: 120px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  z-index: 50;
+}
+
+.toc-title {
+  font-size: 9px;
+  font-weight: 700;
+  color: #94A3B8;
+  letter-spacing: 2px;
+  padding: 0 14px 10px;
+  border-bottom: 1px solid #F1F5F9;
+  margin-bottom: 6px;
+}
+
+.toc-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  font-size: 11px;
+  color: #94A3B8;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  text-decoration: none;
+}
+
+.toc-item:hover {
+  color: #3B82F6;
+}
+
+.toc-item.active {
+  color: #3B82F6;
+  font-weight: 700;
+}
+
+.toc-item.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #3B82F6;
+  border-radius: 0 2px 2px 0;
+}
+
+.toc-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #CBD5E1;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.toc-item.active .toc-dot,
+.toc-item:hover .toc-dot {
+  background: #3B82F6;
+}
