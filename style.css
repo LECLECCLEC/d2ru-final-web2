@@ -11,7 +11,6 @@ body {
   line-height: 1.6;
 }
 
-/* 네비게이션 */
 nav {
   background: #ffffff;
   padding: 0 60px;
@@ -73,7 +72,6 @@ nav {
   background: #2563EB;
 }
 
-/* 히어로 */
 #hero {
   background: #ffffff;
   padding: 100px 60px;
@@ -189,7 +187,6 @@ nav {
   border-color: #94A3B8;
 }
 
-/* 히어로 로고 */
 .hero-logo-visual {
   flex: 0.8;
   display: flex;
@@ -221,7 +218,6 @@ nav {
   animation: pulseLight 5s ease-in-out infinite;
 }
 
-/* 통계 바 */
 .stats-bar {
   background: #0F172A;
   padding: 40px 60px;
@@ -257,7 +253,6 @@ nav {
   margin-top: 8px;
 }
 
-/* 고객사 슬라이드 */
 .clients-section {
   padding: 56px 0;
   background: #F8FAFC;
@@ -313,7 +308,6 @@ nav {
   padding: 0 24px;
 }
 
-/* 공통 섹션 */
 section {
   padding: 100px 60px;
 }
@@ -341,7 +335,6 @@ section {
   margin-bottom: 48px;
 }
 
-/* 회사소개 */
 #about {
   background: #ffffff;
 }
@@ -384,7 +377,6 @@ section {
   line-height: 1.8;
 }
 
-/* 기술 전문성 */
 .skills-section {
   padding: 100px 60px;
   background: #F8FAFC;
@@ -447,7 +439,6 @@ section {
   border: 1px solid #BFDBFE;
 }
 
-/* 서비스 */
 #services {
   background: #ffffff;
 }
@@ -499,7 +490,6 @@ section {
   line-height: 1.7;
 }
 
-/* 연혁 */
 #history {
   background: #F8FAFC;
 }
@@ -555,7 +545,6 @@ section {
   font-weight: 600;
 }
 
-/* 문의 */
 #contact {
   background: linear-gradient(135deg, #EFF6FF 0%, #F1F5F9 100%);
   text-align: center;
@@ -649,7 +638,6 @@ section {
   transform: translateY(-2px);
 }
 
-/* 푸터 */
 footer {
   background: #020617;
   padding: 40px 60px;
@@ -687,7 +675,6 @@ footer > p {
   margin-bottom: 0;
 }
 
-/* 애니메이션 */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -708,7 +695,6 @@ footer > p {
   100% { transform: translateX(-50%); }
 }
 
-/* 반응형 */
 @media (max-width: 1024px) {
   .service-grid { grid-template-columns: 1fr 1fr; }
   .stats-bar { grid-template-columns: repeat(2, 1fr); }
@@ -725,7 +711,6 @@ footer > p {
   .stats-bar { padding: 32px 20px; }
 }
 
-/* 사이드바 목차 */
 .sidebar-toc {
   position: fixed;
   right: 24px;
