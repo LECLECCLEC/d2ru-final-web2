@@ -173,7 +173,7 @@ updateToc(); // 페이지 로드시 바로 실행
         const leafId = 'leaf' + ci + '_' + li;
         nodes.push({
           id: leafId, type: 'leaf', x: lx, y: ly, r: 23,
-          label: name.length > 5 ? [name.slice(0,half), name.slice(half)] : [name],
+          label: name.length > 4 ? [name.slice(0,half), name.slice(half)] : [name],
           color: cat.color, rgb, phi: Math.random()*Math.PI*2, parentId: catId, childIds: [], catIndex: ci
         });
         catNode.childIds.push(leafId);
